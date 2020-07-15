@@ -1,0 +1,6 @@
+<h2>Welcome list</h2>
+<div class="container" *ngFor="let employees of employee">
+    <div class="column">
+        <button (click)="onClick(employees.id)" style="background-color: blueviolet;" routerLink="/details" href="">{{employees.name}}</button>
+    </div>
+</div>

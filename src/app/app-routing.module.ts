@@ -4,6 +4,8 @@ import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import { CheckGuard } from './guards/check.guard';
+import { EmployeeDetailComponent } from './employee-detail/employee-detail.component';
+
 
 
 const routes: Routes = [{
@@ -21,9 +23,13 @@ const routes: Routes = [{
   component: FooterComponent,
 },
 {
+  path: 'details/:id',
+  component: EmployeeDetailComponent,
+},
+{
   path:'users',
   loadChildren:'app/users/users.module#usersModule'
-}
+},
 ];
 
 @NgModule({
