@@ -5,6 +5,8 @@ import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import { CheckGuard } from './guards/check.guard';
 import { EmployeeDetailComponent } from './employee-detail/employee-detail.component';
+import { LoginpageComponent } from './loginpage/loginpage.component';
+import { LogindetailsComponent } from './logindetails/logindetails.component';
 
 
 
@@ -23,13 +25,17 @@ const routes: Routes = [{
   component: FooterComponent,
 },
 {
-  path: 'details/:id',
+  path: 'details/:id ',
   component: EmployeeDetailComponent,
 },
 {
   path:'users',
   loadChildren:'app/users/users.module#usersModule'
 },
+{
+  path:'logindetails',
+  component:LogindetailsComponent,
+}
 ];
 
 @NgModule({

@@ -1,9 +1,9 @@
 <h2>Welcome details</h2>
-<ul style="text-align:center" *ngFor="let employees of employee">
+<ul style="text-align:center">
     <li>
-      Employee Id: {{employees.id}} <br>
-      Employee Name: {{employees.name}}<br>
-      Employee Age: {{employees.age}}
+      Employee Id: {{employee?.id}} <br>
+      Employee Name: {{employee?.name}}<br>
+      Employee Age: {{employee?.age}}
     </li>
     <hr>
 </ul>

@@ -10,6 +10,8 @@ import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { EmployeeDetailComponent } from './employee-detail/employee-detail.component';
 import {EmployeeService} from './employee.service';
 import {HttpClientModule} from '@angular/common/http';
+import { LoginpageComponent } from './loginpage/loginpage.component';
+import { LogindetailsComponent } from './logindetails/logindetails.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,6 +20,8 @@ import {HttpClientModule} from '@angular/common/http';
     FooterComponent,
     EmployeeListComponent,
     EmployeeDetailComponent,
+    LoginpageComponent,
+    LogindetailsComponent,
    
   ],
   imports: [

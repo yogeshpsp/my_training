@@ -29,4 +29,7 @@ export class AppComponent {
 this._router.navigate(['/footer']);
 this.message='you are in footer section';
   }
+  home(): void{
+    this._router.navigate(['/home']);
+  }
 }
