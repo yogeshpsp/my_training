@@ -12,6 +12,7 @@ import {EmployeeService} from './employee.service';
 import {HttpClientModule} from '@angular/common/http';
 import { LoginpageComponent } from './loginpage/loginpage.component';
 import { LogindetailsComponent } from './logindetails/logindetails.component';
+import {FormsModule} from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +28,8 @@ import { LogindetailsComponent } from './logindetails/logindetails.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [CheckGuard, EmployeeService],
   bootstrap: [AppComponent]

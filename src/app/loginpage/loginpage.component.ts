@@ -10,22 +10,37 @@ import { UserService } from '../user.service';
 export class LoginpageComponent implements OnInit {
 public users=[];
 public user: any;
- name: string;
+logincheck:boolean=false;
+loginpass:boolean=false;
  pass: string;
+ firstname:string;
+ message:string;
 private uname: string;
   constructor(private router: Router, private userservice: UserService, private activatedroute: ActivatedRoute) { }
+  search()
+  {
+    this.users=this.users.filter(res=>{
+      return res.username.toLocaleLowerCase().match(this.firstname.toLocaleLowerCase());
+    
+    });
+  }
 
   ngOnInit() {
   this.userservice.getUser()
   .subscribe(data => this.users = data); 
   }
 onClick(){
- this.router.navigate(['/logindetails']);
+if(this.users[0].username==this.firstname && this.users[0].password==this.pass){
+    this.router.navigate(['/home']);
 }
-OnInput(event: any) {
-  this.name = event.target.value;
- }
-onkeypass(event: any){
-  this.pass=event.target.value;
+else{
+  this.message="User Authentication Invalid";
 }
 }
+
+
+}
+
+
+
+

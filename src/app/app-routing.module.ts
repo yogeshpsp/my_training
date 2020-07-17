@@ -33,7 +33,7 @@ const routes: Routes = [{
   loadChildren:'app/users/users.module#usersModule'
 },
 {
-  path:'logindetails',
+  path:'logindetails/:username',
   component:LogindetailsComponent,
 }
 ];
