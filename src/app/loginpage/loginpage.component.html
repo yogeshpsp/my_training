@@ -8,25 +8,25 @@
               <h1 style="color:red">{{message}}</h1>
               <label for="" class="label">Username</label>
               <div class="control has-icons-left">
-                <input type="text" name="firstname" [(ngModel)]="firstname" (input)="search()" placeholder="e.g. Username" class="input" required>
+                <input type="text" name="firstname" [(ngModel)]="firstname" placeholder="e.g. Username" class="input" required>
                 <span class="icon is-small is-left">
                   <i class="fa fa-envelope"></i>
                 
                 </span>
-                <h2>{{firstname}}</h2>
+                <!-- <h2>{{firstname}}</h2> -->
               </div>
             </div>
             <div class="field">
               <label for="" class="label">Password</label>
               <div class="control has-icons-left">
-                <input [(ngModel)]="pass" (input)="search()" name="pass" type="password" placeholder="*******" class="input" required>
+                <input [(ngModel)]="pass" name="pass" type="password" placeholder="*******" class="input" required>
                 <span class="icon is-small is-left">
                   <i class="fa fa-lock"></i>
                 </span>
               </div>
             </div>
             <div class="field">
-              <button (click)="onClick()" routerLink="/home" class="button is-success">
+              <button (click)="onClick()" [disabled]="!firstname && !pass" class="button is-success">
                 Login
               </button>
             </div>
@@ -35,7 +35,7 @@
       </div>
     </div>
   </div>
-  <h2>{{users[0].username}}</h2>
-  <h2>{{users[0].password}}</h2>
+  <h2>{{users[0]?.username}}</h2>
+  <h2>{{users[0]?.password}}</h2>
 </section>
 

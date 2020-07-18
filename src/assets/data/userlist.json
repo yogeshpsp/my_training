@@ -1,6 +1,6 @@
 [
-    {"userid":1, "username":"palani", "password": "palani1"},
-    {"userid":2, "username":"naveen", "password": "naveen1"},
-    {"userid":3, "username":"yogesh", "password": "yogesh1"},
-    {"userid":4, "username":"yogeshpsp", "password": "1yogeshpsp"}
+    {"role": "admin","userid":1, "username":"palani", "password": "palani1"},
+    {"role": "user","userid":2, "username":"naveen", "password": "naveen1"},
+    {"role": "executive","userid":3, "username":"yogesh", "password": "yogesh1"},
+    {"role": "admin","userid":4, "username":"yogeshpsp", "password": "1yogeshpsp"}
 ]

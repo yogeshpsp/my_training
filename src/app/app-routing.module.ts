@@ -6,23 +6,35 @@ import { FooterComponent } from './footer/footer.component';
 import { CheckGuard } from './guards/check.guard';
 import { EmployeeDetailComponent } from './employee-detail/employee-detail.component';
 import { LoginpageComponent } from './loginpage/loginpage.component';
-import { LogindetailsComponent } from './logindetails/logindetails.component';
+import { HeaderComponent } from './header/header.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 
 
-const routes: Routes = [{
+const routes: Routes = [ 
+  {
+    path:'',
+    component:LoginpageComponent
+  },
+  {
+    path:'header',
+    component: HeaderComponent
+  },
+  {
   path:'home',
-  component: HomeComponent,
-  canActivate:[CheckGuard],
-  data:['YOGESH']
+  component: HomeComponent
 },
 {
   path:'contact',
-  component: ContactComponent
+  component: ContactComponent,
+  canActivate:[CheckGuard],
+  data: ['admin']
 },
 {
   path: 'footer',
   component: FooterComponent,
+  canActivate:[CheckGuard],
+  data: ['admin', 'user']
 },
 {
   path: 'details/:id ',
@@ -33,8 +45,8 @@ const routes: Routes = [{
   loadChildren:'app/users/users.module#usersModule'
 },
 {
-  path:'logindetails/:username',
-  component:LogindetailsComponent,
+  path: 'pagenotfound',
+  component: PagenotfoundComponent
 }
 ];
 

@@ -1,24 +1,31 @@
 import { Injectable } from '@angular/core';
-import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree } from '@angular/router';
+import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CheckGuard implements CanActivate {
-  user={
-    role:'YOGESH'
-  }
+  data: any;
+  next: any;
+
+  constructor(
+    private router: Router
+  ) {}
+
   canActivate(
     next: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot):  boolean  {
-      if(next.data[0]==this.user.role){
-    return true;
-      }
-      else{
-        return false;
-        
-      }
+    state: RouterStateSnapshot): boolean {
+    const role = localStorage.getItem('role');
+   
+    if (this.next.data.find((d) => { return d === role })) {
+      return true;
+    }
+    else {
+      this.router.navigate(['pagenotfound'], { queryParams: { message: 'Unauthorized' } });
+      return false;
+
+    }
   }
-  
+
 }

@@ -1,37 +1,4 @@
-<app-loginpage></app-loginpage>
-<nav class="navbar is-light" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a class="navbar-item" href="https://bulma.io">
-      <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
-    </a>
 
-    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
 
-  <div id="navbarBasicExample" class="navbar-menu">
-<div class="navbar-item is-light">
-  {{message}}
-</div>
-    <div class="navbar-end">
-      <div class="navbar-item">
-        <div class="buttons">
-          <a (click)="userlog=true" routerLink="/home" class="button is-primary">
-            <strong>Home</strong>
-          </a>
-          <a (click)="userlog=false" routerLink="/contact" class="button is-light">
-            Contact
-          </a>
-          <a (click)="footer()" routerLink="/footer" class="button is-light">
-            Footer
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</nav>
 <router-outlet></router-outlet>
 

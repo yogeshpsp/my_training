@@ -11,8 +11,9 @@ import { EmployeeDetailComponent } from './employee-detail/employee-detail.compo
 import {EmployeeService} from './employee.service';
 import {HttpClientModule} from '@angular/common/http';
 import { LoginpageComponent } from './loginpage/loginpage.component';
-import { LogindetailsComponent } from './logindetails/logindetails.component';
 import {FormsModule} from '@angular/forms';
+import { HeaderComponent } from './header/header.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +23,9 @@ import {FormsModule} from '@angular/forms';
     EmployeeListComponent,
     EmployeeDetailComponent,
     LoginpageComponent,
-    LogindetailsComponent,
+    HeaderComponent,
+    PagenotfoundComponent,
+    
    
   ],
   imports: [
