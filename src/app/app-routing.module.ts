@@ -8,6 +8,7 @@ import { EmployeeDetailComponent } from './employee-detail/employee-detail.compo
 import { LoginpageComponent } from './loginpage/loginpage.component';
 import { HeaderComponent } from './header/header.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { SubmitContactComponent } from './submit-contact/submit-contact.component';
 
 
 
@@ -37,8 +38,12 @@ const routes: Routes = [
   data: ['admin', 'user']
 },
 {
-  path: 'details/:id ',
+  path: 'details/:id',
   component: EmployeeDetailComponent,
+},
+{
+  path:'submit-contact',
+  component: SubmitContactComponent,
 },
 {
   path:'users',

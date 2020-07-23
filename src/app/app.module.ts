@@ -14,6 +14,8 @@ import { LoginpageComponent } from './loginpage/loginpage.component';
 import {FormsModule} from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { FormContactComponent } from './form-contact/form-contact.component';
+import { SubmitContactComponent } from './submit-contact/submit-contact.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,6 +27,8 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
     LoginpageComponent,
     HeaderComponent,
     PagenotfoundComponent,
+    FormContactComponent,
+    SubmitContactComponent,
     
    
   ],

@@ -34,6 +34,9 @@ this.message='you are in footer section';
   home(): void{
     this._router.navigate(['/home']);
   }
+  contact(): void{
+    this._router.navigate(['/contact']);
+  }
   header(){
     this._router.navigate(['/header']);
   } 

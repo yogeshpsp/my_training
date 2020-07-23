@@ -17,6 +17,6 @@ public employee=[];
       .subscribe(data => this.employee = data);
   }
   onClick(employeeId: number){
-    this.router.navigate(['/details', employeeId]);
+    this.router.navigate(['/details',employeeId]);
   }
 }

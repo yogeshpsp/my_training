@@ -21,7 +21,7 @@
             <a (click)="userlog=true" routerLink="/home" class="button is-primary">
               <strong>Home</strong>
             </a>
-            <a (click)="userlog=false"*ngIf="val" routerLink="/contact" class="button is-light">
+            <a (click)="contact()"*ngIf="val" routerLink="/contact" class="button is-light">
               Contact
             </a>
             <a (click)="footer()" *ngIf="check" routerLink="/footer" class="button is-light">

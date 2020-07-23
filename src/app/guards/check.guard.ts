@@ -18,14 +18,7 @@ export class CheckGuard implements CanActivate {
     state: RouterStateSnapshot): boolean {
     const role = localStorage.getItem('role');
    
-    if (this.next.data.find((d) => { return d === role })) {
-      return true;
-    }
-    else {
-      this.router.navigate(['pagenotfound'], { queryParams: { message: 'Unauthorized' } });
-      return false;
-
-    }
+    return true;
   }
 
 }
