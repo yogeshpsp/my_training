@@ -11,11 +11,13 @@ import { EmployeeDetailComponent } from './employee-detail/employee-detail.compo
 import {EmployeeService} from './employee.service';
 import {HttpClientModule} from '@angular/common/http';
 import { LoginpageComponent } from './loginpage/loginpage.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { FormContactComponent } from './form-contact/form-contact.component';
 import { SubmitContactComponent } from './submit-contact/submit-contact.component';
+import { FormLoginComponent } from './form-login/form-login.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,13 +30,15 @@ import { SubmitContactComponent } from './submit-contact/submit-contact.componen
     HeaderComponent,
     PagenotfoundComponent,
     FormContactComponent,
-    SubmitContactComponent, 
+    SubmitContactComponent,
+    FormLoginComponent, 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    ReactiveFormsModule
   ],
   providers: [CheckGuard, EmployeeService],
   bootstrap: [AppComponent]

@@ -1,0 +1,138 @@
+<form [formGroup]="userlist" style="text-align:center;" (ngSubmit)="onSubmit()">
+  {{userlist.value | json}}
+<div class="field">
+    <label class="label">FirstName</label>
+    <div class="control">
+    <input  type="text" formControlName="firstname">
+    </div>
+  </div>
+  <div class="field">
+    <label class="label">LastName</label>
+    <div class="control">
+        <input  type="text" formControlName="lastname">
+    </div>
+  </div>
+  
+  <div class="field">
+    <label class="label">Username</label>
+    <div class="control has-icons-left has-icons-right">
+      <input class="is-success" type="text" placeholder="Text input" value="bulma" formControlName="username">
+      <span class="icon is-small is-left">
+        <i class="fas fa-user"></i>
+      </span>
+      <span class="icon is-small is-right">
+        <i class="fas fa-check"></i>
+      </span>
+    </div>
+  </div>
+  
+  <div class="field">
+    <label class="label">Password</label>
+    <div class="control">
+      <input class="is-danger" type="passsword" value="hello@" formControlName="password">
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label">Confirm Password</label>
+    <div class="control">
+      <input class="is-danger" type="passsword"  value="hello@" formControlName="confirmpassword">
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label">DOB</label>
+    <div class="control">
+      <input  type="date" id="txtdate" formControlName="dob" max="2020-07-25">
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label">Age</label>
+    <div class="control">
+      <input  type="number" formControlName="age">
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label">Roles</label>
+    <div class="control">
+        <select formControlName="roles">
+            <option value="Super Admin" name="Super Admin">Super Admin</option>
+            <option value="Admin">Admin</option>
+            <option value="User">user</option>
+          </select>
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label">Skills</label>
+    <div class="control">
+        <input type="checkbox" name="python" formControlName="skills">Python<br>
+        <input type="checkbox" name="java" formControlName=skills>Java<br>
+        <input type="checkbox" name="sql" formControlName="skills">SQL<br>
+    </div>
+  </div>
+  
+  <div class="field">
+    <div class="control">
+      <label class="radio">
+        <input type="radio" formControlName="gender" value="male">
+        Male
+      </label>
+      <label class="radio">
+        <input type="radio" formControlName="gender" value="female">
+        Female
+      </label>
+    </div>
+  </div>
+
+  <div class="field" formGroupName="address">
+      <h2>Address</h2>
+    <label class="label">Address1</label>
+    <div class="control">
+      <input  type="text" formControlName="address1">
+    </div>
+  
+
+  <div class="field">
+  <label class="label">Address2</label>
+  <div class="control">
+    <input  type="text" formControlName="address2">
+  </div>
+</div>
+
+<div class="field">
+    <label class="label">street</label>
+    <div class="control">
+      <input  type="text" formControlName="street">
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label">Zip</label>
+    <div class="control">
+      <input  type="text" formControlName="zip">
+    </div>
+  </div>
+</div>
+<p>{{today|date}}:{{ageval}}</p>
+<div class="columns">
+  <div class="field is-grouped column">
+    <div class="control">
+      <button class="button is-link" [disabled]="!userlist.valid">Submit</button>
+    </div>
+  </div>
+  <div class="field is-grouped column">
+    <div class="control">
+      <button class="button is-link" (click)="postvalue()">Edit </button>
+    </div>
+  </div>
+</div>
+</form>
+
+
+
+
+
+

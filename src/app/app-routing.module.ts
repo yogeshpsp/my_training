@@ -9,6 +9,7 @@ import { LoginpageComponent } from './loginpage/loginpage.component';
 import { HeaderComponent } from './header/header.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { SubmitContactComponent } from './submit-contact/submit-contact.component';
+import { FormLoginComponent } from './form-login/form-login.component';
 
 const routes: Routes = [ 
   {
@@ -46,6 +47,10 @@ const routes: Routes = [
 {
   path:'users',
   loadChildren:'app/users/users.module#usersModule'
+},
+{
+path:'formlogin',
+component:FormLoginComponent
 },
 {
   path: 'pagenotfound',

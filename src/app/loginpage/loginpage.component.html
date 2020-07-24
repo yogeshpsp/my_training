@@ -25,14 +25,19 @@
                 </span>
               </div>
             </div>
-            <div class="field">
+            <div class="columns">
+            <div class="field column">
               <button (click)="onClick()" [disabled]="!firstname && !pass" class="button is-success">
                 Login
               </button>
             </div>
+              <div class="field column">
+                <button (click)="formpage()" class="button is-success">Signup</button>
+            </div>
+          </div>
           </form>
         </div>
-      </div>
+      </div> 
     </div>
   </div>
   <h2>{{users[0]?.username}}</h2>

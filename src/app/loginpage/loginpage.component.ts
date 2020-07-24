@@ -38,7 +38,8 @@ export class LoginpageComponent implements OnInit {
     } else {
       this.message="User Authentication Invalid";
     }
-    
-  
+  }
+  formpage() {
+    this.router.navigate(['formlogin']);
   }
 }
