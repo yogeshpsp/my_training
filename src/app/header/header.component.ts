@@ -44,6 +44,9 @@ this.message='you are in footer section';
     localStorage.clear();
     this._router.navigate(['/']);
   }
+  pagefounder(){
+    this._router.navigate(['/pagenotfound'])
+  }
   
   ngOnInit(): void {
     if(localStorage.getItem('role')=="user" || localStorage.getItem('role')=="admin"){

@@ -28,15 +28,13 @@ import { SubmitContactComponent } from './submit-contact/submit-contact.componen
     HeaderComponent,
     PagenotfoundComponent,
     FormContactComponent,
-    SubmitContactComponent,
-    
-   
+    SubmitContactComponent, 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [CheckGuard, EmployeeService],
   bootstrap: [AppComponent]

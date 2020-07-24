@@ -10,8 +10,6 @@ import { HeaderComponent } from './header/header.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { SubmitContactComponent } from './submit-contact/submit-contact.component';
 
-
-
 const routes: Routes = [ 
   {
     path:'',
