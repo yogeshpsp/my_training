@@ -8,6 +8,7 @@ import {Validators} from '@angular/forms';
   styleUrls: ['./form-login.component.css']
 })
 export class FormLoginComponent {
+  [x: string]: any;
   today=new Date();
    v:any = new Date();
      n:number = this.v.getFullYear();
@@ -22,10 +23,10 @@ userlist=this.fb.group({
   password: [''],
   confirmpassword: [''],
   dob:[''],
-  age:FormArray[('')],
   roles:[''],
   gender:[''],
-  skills:[''],
+  skills:[''], 
+    age:[''],
   address: this.fb.group({
     address1: [''],
     address2: [''],
@@ -33,12 +34,19 @@ userlist=this.fb.group({
     zip: ['']
   })
 });
+getAge(e) {
+  console.log(e);
+  const currentyear = new Date().getFullYear();
+  const year = new Date(e).getFullYear();
+  this.userlist.patchValue({ age: currentyear - year });
+}
 
 onSubmit(){
    this.d=new Date(this.userlist.get('dob').value);
  this.l=this.d.getFullYear();
  this.ageval=this.n-this.l;
- 
+ const age=this.userlist.get('userlist.age');
+//  (age as FormArray).push(this.ageval);
   //let value=(this.userlist.get('dob').dat);
   //let source=Math.abs(value);
   //console.log(value);
@@ -53,7 +61,7 @@ postvalue(){
     dob:['1999-03-11'],
     roles:['Admin'],
     gender:'male',
-    age:'',
+    age:'21',
     skills:[],
     address:{
       address1:['M.kollapatty'],

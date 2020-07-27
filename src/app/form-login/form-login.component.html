@@ -43,7 +43,7 @@
   <div class="field">
     <label class="label">DOB</label>
     <div class="control">
-      <input  type="date" id="txtdate" formControlName="dob" max="2020-07-25">
+      <input  type="date" id="txtdate" formControlName="dob" max="2020-07-25" (input)="getAge($event.target.value)">
     </div>
   </div>
 
