@@ -26,7 +26,7 @@ export class LoginpageComponent implements OnInit {
 
   ngOnInit() {
     this.userservice.getUser()
-      .subscribe(data => this.users = data);
+      .subscribe(data => this.users = data); //subscribe((data)=>{this.users=data}
   }
   onClick() {
     this.message = '';
